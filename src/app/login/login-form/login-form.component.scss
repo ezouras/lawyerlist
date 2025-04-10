@@ -1,0 +1,36 @@
+@use '../../../styles/variables' as *;
+:host {
+  display: flex;
+  justify-content: center;
+  padding-top:.5rem;
+  background-color: $main-background-color;
+  color:$main-font-color;
+}
+
+.login-card{
+  box-shadow: $backbround-border-box;
+  border-radius: 10px;
+}
+
+.mat-form-field {
+  width: 100%;
+  min-width: 300px;
+}
+
+mat-card-title,
+mat-card-content {
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  padding: 16px;
+  width: 300px;
+  color: white;
+  background-color: red;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+}

@@ -1,0 +1,23 @@
+<mat-card class="login-card">
+<mat-card-content>
+<div>
+<p>
+  <mat-form-field>
+    <input type="text" matInput placeholder="Username" [value]="username()" (input)="setUserName($event)">
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field>
+    <input type="password" matInput placeholder="Password" [value]="password()" (input)="setPassword($event)">
+  </mat-form-field>
+</p>
+<!--@if (!isFormValid()) {
+<p class="error">
+  Invalid username or password
+</p>
+}
+-->
+<a mat-raised-button href="https://www.google.com/" target="_blank">Login</a>
+</div>
+</mat-card-content>
+</mat-card>
