@@ -1,1 +1,13 @@
-<p>job-panel works!</p>
+<div [ngStyle]="{ 'background-color': job.court.color}" class="job-panel-container">
+  <div class="row">
+    <div>{{job.court.name}}</div>
+    <div>{{job.date | date}}</div>
+    <div>{{job.time | date:'shortTime'}}</div>
+  </div>
+  <div class="row">
+  <div>{{job.lawyer.first_name}}</div>
+  <div>{{job.lawyer.last_name}}</div>
+  <div>{{job.amount}}</div>
+  </div>
+  <div>{{job.job_description}}</div>
+</div>

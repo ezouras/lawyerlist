@@ -1,13 +1,22 @@
 export enum CollarCounty {
-  Lake,
-  McHenry,
-  Kane,
-  DuPage,
-  Cook,
-  Will,
+  Lake = 'Lake',
+  McHenry = 'McHenry',
+  Kane = 'Kane',
+  DuPage = 'DuPage',
+  Cook = 'Cook',
+  Will = 'Will',
 }
 
-export interface court {
+export const CountyColors: Record<CollarCounty, string> = {
+  [CollarCounty.Lake]: '#6e0d0e',
+  [CollarCounty.McHenry]: '#fba91a',
+  [CollarCounty.Kane]: '#4a9852',
+  [CollarCounty.DuPage]: '#d2a62c',
+  [CollarCounty.Cook]: '#2d5058',
+  [CollarCounty.Will]: '#bc2126',
+};
+
+export interface Court {
   county: CollarCounty;
   color: string;
   name: string;
@@ -16,7 +25,28 @@ export interface court {
   link: string;
 }
 
-export const CountyCourts: court[] = [
+export interface Job {
+  id: string;
+  date: Date;
+  time: Date;
+  lawyer: LawyerProfile;
+  court: Court;
+  county: CollarCounty;
+  job_description: string;
+  amount: string;
+}
+
+export interface LawyerProfile {
+  first_name: string;
+  last_name: string;
+  phone: string;
+  email: string;
+  profile_link?: string;
+  profile_picture?: string;
+  bio?: string;
+}
+
+export const CountyCourts: Court[] = [
   {
     county: CollarCounty.Cook,
     color: '#d5dcdd',

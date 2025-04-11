@@ -1,0 +1,50 @@
+
+@use '../../styles/variables' as *;
+.main-container{
+  height:100vh;
+  background-color:$main-center;
+  display:flex;
+  flex-direction: column;
+  .header{
+    display:flex;
+    justify-content: space-around;
+    background-color: $main-side;
+    padding:.5rem;
+    .header-left{
+      width:10%;
+    }
+    .header-title{
+      font:bold;
+      display:flex;
+      justify-content: center;
+      align-items:center;
+    }
+    .header-right{
+      width:10%;
+    }
+
+  }
+  .main-container-data{
+    display:flex;
+    justify-content: space-around;
+    .filter{
+      width:20%;
+      background-color: $main-side;
+      overflow:scroll;
+    }
+    .main-tasks{
+      display:flex;
+      justify-content: center;
+      width:60%;
+      background-color: $main-center;
+      overflow: scroll;
+    }
+    .main-task-details{
+      width:20%;
+      background-color: $main-side;
+      overflow:scroll;
+    }
+
+  }
+
+}

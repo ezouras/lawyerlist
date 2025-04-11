@@ -1,1 +1,16 @@
-<p>jobs-list works!</p>
+@for(county of counties; track county) {
+  <mat-accordion class="example-headers-align">
+  <mat-expansion-panel class="expansion-panel" [ngStyle]="{ 'background-color': countyColors[county]}" [expanded]="step() === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title> {{county}} </mat-panel-title>
+    </mat-expansion-panel-header>
+    @for(countyJob of jobsByCounty[county]; track countyJob) {
+      <app-job-panel [job]="countyJob"></app-job-panel>
+    }
+  </mat-expansion-panel>
+
+</mat-accordion>
+}
+@empty {
+  <div>No items to display.</div>
+}

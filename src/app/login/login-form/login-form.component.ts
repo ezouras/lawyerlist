@@ -5,6 +5,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // or ReactiveFormsModule
 import { MatRippleModule } from '@angular/material/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login-form',
@@ -16,6 +17,7 @@ import { MatRippleModule } from '@angular/material/core';
     FormsModule,
     ReactiveFormsModule,
     MatRippleModule,
+    RouterLink,
   ],
   templateUrl: './login-form.component.html',
   styleUrl: './login-form.component.scss',

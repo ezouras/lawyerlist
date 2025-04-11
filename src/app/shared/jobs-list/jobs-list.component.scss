@@ -1,0 +1,16 @@
+:host{
+  color:white;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+
+}
+
+:host .mat-expansion-panel-body{
+  padding:0;
+}
+
+  expansion-panel{
+    padding:0;
+  }
