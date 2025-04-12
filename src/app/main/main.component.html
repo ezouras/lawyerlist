@@ -6,11 +6,11 @@
   </div>
   <div class="main-container-data">
     <div class="filter">
-      I'm a filter
+      <app-filter></app-filter>
     </div>
     <div class="main-tasks">
-      TODAY
-      Everythyhing you have scheduled today
+      <div class="main-tasks-title">Today</div>
+      <app-jobs-list [jobs]="jobs" ></app-jobs-list>
     </div>
     <div class="main-task-details">
       JOB Details

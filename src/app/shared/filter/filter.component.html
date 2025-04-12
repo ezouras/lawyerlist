@@ -1,1 +1,16 @@
-<p>filter works!</p>
+<div class="filter-container">
+  <div class="filter-title">Menu</div>
+    <div class="filter-box">
+     <div class="filter-item-title">Tasks</div>
+     @for(taskItem of taskFilterItems; track taskItem) {
+       <app-filter-list-item [filterItem]="taskItem"></app-filter-list-item>
+     }
+    </div>
+    <div class="filter-box">
+     <div class="filter-item-title">Location</div>
+     @for(taskItem of locationFilterItems; track taskItem){
+     <app-filter-list-item [filterItem]="taskItem"></app-filter-list-item>
+     }
+
+  </div>
+</div>

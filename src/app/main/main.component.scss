@@ -7,7 +7,7 @@
   flex-direction: column;
   .header{
     display:flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: $main-side;
     padding:.5rem;
     .header-left{
@@ -27,14 +27,17 @@
   .main-container-data{
     display:flex;
     justify-content: space-around;
+
     .filter{
-      width:20%;
+      width:30%;
       background-color: $main-side;
       overflow:scroll;
     }
     .main-tasks{
       display:flex;
       justify-content: center;
+      flex-direction: column;
+    align-items: center;
       width:60%;
       background-color: $main-center;
       overflow: scroll;

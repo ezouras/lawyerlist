@@ -1,0 +1,21 @@
+<div class="filter-list-item-container">
+  @if(filterItem) {
+  <div class="filter-list-item-left">
+    <div class="filter-list-item-icon">
+    @if(filterItem.icon) {
+      <mat-icon aria-hidden="false" aria-label="Example home icon" [fontIcon]="filterItem.icon"></mat-icon>
+      <!--<mat-icon aria-hidden="false" [attr.aria-label]="filterItem.title" [fontIcon]="filterItem.icon"></mat-icon>-->
+    }
+    @if(filterItem.color) {
+      <div class="filter-color" [ngStyle]="{'background-color': filterItem.color}"></div>
+    }
+    </div>
+    <div class="filter-list-item-name">
+      {{ filterItem.title }}
+    </div>
+  </div>
+  <div class="filter-list-item-count">
+    {{ filterItem.filterCount }}
+</div>
+  }
+</div>
