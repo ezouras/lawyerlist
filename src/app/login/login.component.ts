@@ -17,7 +17,6 @@ export class LoginComponent {
   ngOnInit() {
     this.jobsListService.getJobs().subscribe((data) => {
       this.jobs = data;
-      console.log('EZ jobs in login are ', this.jobs);
     });
   }
 }

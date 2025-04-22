@@ -1,5 +1,7 @@
 @use '../../../../styles/variables' as *;
 .job-panel-container{
+  font-size: xx-small;
+  cursor: pointer;
   color:black;
   display:flex;
   flex-direction:column;
@@ -7,7 +9,12 @@
     border: 2px solid green;
     border-radius: 10px;
     margin-bottom: .5rem;
+    :hover{
+        filter: brightness(150%);
+      }
   .row{
     display:flex;
+    justify-content: space-between;
+
   }
 }

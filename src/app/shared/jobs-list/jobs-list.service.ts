@@ -9,6 +9,7 @@ import { Lawyers, FakeAmounts } from '../../app-mock-data';
 })
 export class JobsListService {
   jobs = new BehaviorSubject<Job[]>([]);
+  selectedJob = new BehaviorSubject<Job | undefined>(undefined);
 
   constructor() {
     this.setJobs();
@@ -59,9 +60,20 @@ export class JobsListService {
   getJob(jobId: string): Job | undefined {
     return this.jobs.getValue().filter((job) => job.id === jobId)[0];
   }
+
   addJob(job: any): void {
     let currentJobs = this.jobs.getValue();
     currentJobs.push(job);
     this.jobs.next(currentJobs);
+  }
+
+  setSelectedJob(jobId: string): void {
+    let currentJob = this.getJob(jobId);
+    console.log('EZ setting current selected job: ', jobId);
+    this.selectedJob.next(currentJob);
+  }
+
+  getSelectedJob(): Observable<Job | undefined> {
+    return this.selectedJob.asObservable();
   }
 }

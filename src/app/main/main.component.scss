@@ -34,13 +34,17 @@
       overflow:scroll;
     }
     .main-tasks{
+      padding-top:$main-padding-top;
       display:flex;
-      justify-content: center;
       flex-direction: column;
     align-items: center;
       width:60%;
       background-color: $main-center;
       overflow: scroll;
+      .main-tasks-title{
+        font-weight: $title-weight;
+  color:$main-text-color;
+      }
     }
     .main-task-details{
       width:20%;

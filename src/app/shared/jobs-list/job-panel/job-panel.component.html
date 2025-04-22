@@ -1,13 +1,8 @@
-<div [ngStyle]="{ 'background-color': job.court.color}" class="job-panel-container">
+<div  (click)=setSelectedJob() [ngStyle]="{ 'background-color': job.court.color, 'border':isSelected? '2px solid lime':'1px solid green'}" class="job-panel-container">
   <div class="row">
-    <div>{{job.court.name}}</div>
-    <div>{{job.date | date}}</div>
-    <div>{{job.time | date:'shortTime'}}</div>
+    <div class="job-panel-text">{{job.court.name}}</div>
+    <div class="job-panel-text">{{job.date | date: 'shortDate'}}</div>
+    <div class="job-panel-text">{{job.time | date:'shortTime'}}</div>
+    <div class="job-panel-text">{{job.amount}}</div>
   </div>
-  <div class="row">
-  <div>{{job.lawyer.first_name}}</div>
-  <div>{{job.lawyer.last_name}}</div>
-  <div>{{job.amount}}</div>
-  </div>
-  <div>{{job.job_description}}</div>
 </div>

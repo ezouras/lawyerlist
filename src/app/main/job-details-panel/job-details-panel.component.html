@@ -1,0 +1,10 @@
+<div class="job-details-container">
+  <div class="job-details-title">Jobs Details</div>
+  @if(selectedJob()) {
+  <div class="selected-job-container">
+      <div class="job-title">{{selectedJob()?.id}}</div>
+  </div>
+  } @else {
+     <div class="no-jobs-message">No job selected</div>
+  }
+</div>

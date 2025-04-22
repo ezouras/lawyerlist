@@ -1,8 +1,8 @@
 @use '../../../styles/variables' as *;
 .filter-title{
-  padding-top: 2.5rem;
-  padding-left: .5rem;
-  font-weight: 400;
+  padding-top: $main-padding-top;
+  padding-left: $main-padding-left;
+  font-weight: $title-weight;
   color:$main-text-color;
 }
 .filter-box{

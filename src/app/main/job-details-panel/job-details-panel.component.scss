@@ -1,0 +1,16 @@
+@use '../../../styles/variables' as *;
+.job-details-container{
+  display:flex;
+  flex-direction: column;
+
+  padding-left:$main-padding-left;
+  .job-details-title{
+    font-weight: $title-weight;
+    padding-top:$main-padding-top;
+    color:$main-text-color;
+
+  }
+  .selected-job-container{
+    padding-top:1rem;
+  }
+}
