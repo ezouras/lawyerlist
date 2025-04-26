@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 //import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { Job, CountyCourts } from '../../app.models';
+import { Job, CountyCourts, JobStatus } from '../../app.models';
 import { Lawyers, FakeAmounts } from '../../app-mock-data';
 
 @Injectable({
@@ -38,11 +38,12 @@ export class JobsListService {
       id,
       date: new Date(),
       time: new Date(),
-      lawyer: fakeLawyer,
+      original_lawyer: fakeLawyer,
       court: fakeCourt,
       county: fakeCourt.county,
       job_description: `Job Description for ${id}`,
       amount: fakeAmount,
+      status: JobStatus.PendingNewLawyerAssignment,
     };
     return job;
   }

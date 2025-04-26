@@ -29,12 +29,27 @@ export interface Job {
   id: string;
   date: Date;
   time: Date;
-  lawyer: LawyerProfile;
+  original_lawyer: LawyerProfile;
   court: Court;
   county: CollarCounty;
   job_description: string;
   amount: string;
+  assigned_lawyer?: LawyerProfile;
+  status: JobStatus;
 }
+
+export enum JobStatus {
+  PendingNewLawyerAssignment = 'Pending Lawyer Assignment',
+  Accepted = 'Accepted',
+  Rejected = 'Rejected',
+  Completed = 'Completed',
+}
+export const JobStatusColors: Record<JobStatus, string> = {
+  [JobStatus.PendingNewLawyerAssignment]: '#fba91a',
+  [JobStatus.Accepted]: '#4a9852',
+  [JobStatus.Rejected]: '#d2a62c',
+  [JobStatus.Completed]: '#2d5058',
+};
 
 export interface LawyerProfile {
   first_name: string;

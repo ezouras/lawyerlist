@@ -15,6 +15,11 @@ import {
 export class FilterComponent {
   taskFilterItems: TaskFilterItem[] = [...TaskFilterItems];
   locationFilterItems: TaskFilterItem[] = [...LocationFilterItems];
+  allTasksFilterItem: TaskFilterItem = {
+    title: 'All Tasks',
+    icon: 'all_inbox',
+    filterCount: 0,
+  };
   applyTaskFilter(event: any) {
     console.log('Filter applied');
   }
